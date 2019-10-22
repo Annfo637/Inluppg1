@@ -1,0 +1,49 @@
+.header {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    color: darkslategray;
+}
+.msgField {
+    display: inline-block;
+    width: 250px;
+    height: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid gray;
+    padding: 10px;
+    margin: 20px;
+}
+.boardframe {
+    display: inline-block;
+    border: 10px solid gray;
+    border-collapse: collapse;
+}
+
+.row {
+    
+    display: flex;
+    border-collapse: collapse;
+    
+}
+
+.button {
+    width: 25px;
+    height: 25px;
+    font-size: 24px;
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    vertical-align: top;
+}
+.player1 {
+    color: black;
+    background-color: white;
+}
+.player2 {
+    color: white;
+    background-color: black;
+}
+
+
