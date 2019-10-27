@@ -4,27 +4,28 @@
     color: darkslategray;
 }
 .msgField {
-    display: inline-block;
+    display: block;
     width: 250px;
     height: 35px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    border: 3px solid gray;
-    padding: 10px;
-    margin: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 2px;
+    margin: 10px;
 }
 .boardframe {
     display: inline-block;
     border: 10px solid gray;
-    border-collapse: collapse;
+    /*border-collapse: collapse;*/
 }
 
 .row {
     
     display: flex;
-    border-collapse: collapse;
+    /*border-collapse: collapse;*/
     
 }
 
@@ -46,4 +47,18 @@
     background-color: black;
 }
 
+.winnerMsg {
+    display: inline-block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border: 7px solid gold;
+    border-radius: 10px;
+    padding: 2px;
+    margin: 10px;
+}
 
+.noshow {
+    display: none;
+}
