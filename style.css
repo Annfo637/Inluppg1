@@ -19,13 +19,11 @@
 .boardframe {
     display: inline-block;
     border: 10px solid gray;
-    /*border-collapse: collapse;*/
 }
 
 .row {
     
     display: flex;
-    /*border-collapse: collapse;*/
     
 }
 
