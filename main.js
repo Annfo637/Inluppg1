@@ -59,11 +59,9 @@ function btnClick(event) {
 
 //kontrollera för vinst
 function checkWin(clickedBtn){
-    console.log(clickedBtn)
     const clickedRow = clickedBtn.dataset.row
     const clickedCol = clickedBtn.dataset.col
     const clickedSymb = clickedBtn.textContent
-    console.log(clickedRow, clickedCol, clickedSymb)
 
    if(horizontalWin(clickedRow, clickedCol, clickedSymb)===true ||
    verticalWin(clickedRow, clickedCol, clickedSymb)===true ||
@@ -78,24 +76,20 @@ function checkWin(clickedBtn){
 
 function horizontalWin(row, col, symb){
     let counter = 0
-    let r = parseInt(row)
-    let c = parseInt(col)
+    let x = parseInt(row)
+    let y = parseInt(col)
         
     for(let i=-4; i<5; i++){
-        const checkBtn = boardArray[r][c+i]
-        console.log(checkBtn)
-          
-        if(typeof(checkBtn) !== 'undefined'){
+        if(y+i>=0 && y+i<boardSize){
+            const checkBtn = boardArray[x][y+i]
             if(checkBtn.textContent === symb){
                 counter++
-                console.log(counter)
                 if(counter===5){
                     return true
                 } 
             }                
             else{
                 counter=0
-                console.log(counter)
             }
         }                   
     }            
@@ -103,25 +97,20 @@ function horizontalWin(row, col, symb){
 
 function verticalWin(row, col, symb){
     let counter = 0
-    let r = parseInt(row)
-    let c = parseInt(col)
+    let x = parseInt(row)
+    let y = parseInt(col)
         
     for(let i=-4; i<5; i++){
-        console.log('loop', i)
-        const checkBtn = boardArray[r+i][c]
-        console.log(checkBtn)
-          
-        if(typeof(checkBtn) !== 'undefined'){
+        if(x+i>=0 && x+i<boardSize){
+            const checkBtn = boardArray[x+i][y]
             if(checkBtn.textContent === symb){
                 counter++
-                console.log(counter)
                 if(counter===5){
                     return true
                 } 
             }                
             else{
                 counter=0
-                console.log(counter)
             }
         }                   
     }            
@@ -129,24 +118,20 @@ function verticalWin(row, col, symb){
 
 function topdownWin(row, col, symb){
     let counter = 0
-    let r = parseInt(row)
-    let c = parseInt(col)
+    let x = parseInt(row)
+    let y = parseInt(col)
         
     for(let i=-4; i<5; i++){
-        const checkBtn = boardArray[r+i][c+i]
-         console.log(checkBtn)
-          
-        if(typeof(checkBtn) !== 'undefined'){
+        if((x+i>=0 && x+i<boardSize) && (y+i>=0 && y+i<boardSize)){
+            const checkBtn = boardArray[x+i][y+i]
             if(checkBtn.textContent === symb){
                 counter++
-                console.log(counter)
                 if(counter===5){
                     return true
                 } 
             }                
             else{
                 counter=0
-                console.log(counter)
             }
         }                    
     }            
@@ -154,24 +139,20 @@ function topdownWin(row, col, symb){
 
 function bottomupWin(row, col, symb){
     let counter = 0
-    let r = parseInt(row)
-    let c = parseInt(col)
+    let x = parseInt(row)
+    let y = parseInt(col)
         
-    for(let i=-4; i<5; i++){
-        const checkBtn = boardArray[r-i][c+i]
-         console.log(checkBtn)
-          
-        if(typeof(checkBtn) !== 'undefined'){
+    for(let i=-4; i<5; i++){ 
+        if((x-i>=0 && x-i<boardSize) && (y+i>=0 && y+i<boardSize)){
+            const checkBtn = boardArray[x-i][y+i]
             if(checkBtn.textContent === symb){
                 counter++
-                console.log(counter)
                 if(counter===5){
                     return true
                 } 
             }                
             else{
                 counter=0
-                console.log(counter)
             }
         }                   
     }            
